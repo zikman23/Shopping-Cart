@@ -115,8 +115,8 @@ const Products = (props) => {
     return (
       <li key={index}>
         <Image src={uhit} width={70} roundedCircle></Image>
-        <Button variant="primary" size="large">
-          {item.name}:${item.cost}-Stock={item.instock}
+        <Button variant="primary" size="small">
+          {item.name}- ${item.cost} - Stock: {item.instock}
         </Button>
         <input name={item.name} type="submit" onClick={addToCart}></input>
       </li>
@@ -132,7 +132,7 @@ const Products = (props) => {
         </Card.Header>
         <Accordion.Collapse onClick={() => deleteCartItem(index)} eventKey={1 + index}>
           <Card.Body>
-            $ {item.cost} from {item.country}
+            Cost: ${item.cost}, Origin: {item.country}
           </Card.Body>
         </Accordion.Collapse>
       </Card>
@@ -180,8 +180,8 @@ const Products = (props) => {
           <Accordion>{cartList}</Accordion>
         </Col>
         <Col>
-          <h1>CheckOut </h1>
-          <Button onClick={checkOut}>CheckOut $ {finalList().total}</Button>
+          <h1>Checkout </h1>
+          <Button onClick={checkOut}>Total: ${finalList().total}</Button>
           <div> {finalList().total > 0 && finalList().final} </div>
         </Col>
       </Row>
