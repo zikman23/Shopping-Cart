@@ -1,4 +1,4 @@
-# restock-shopping-cart
+# Shopping Cart
 
 Module 19 - Shopping Cart Exercise - Refactor with Restocking Functionality
 
